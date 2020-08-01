@@ -40,6 +40,19 @@ resetSelected = () => {
   })
 }
 
+
+// resetScore  & player choice / computer choice
+resetAll = () => {
+  playerScoreNumber = 0
+  computerScoreNumber = 0
+  playerScoreEl.textContent = playerScoreNumber
+  computerScoreEl.textContent = computerScoreNumber
+  playerChoiceEl.textContent = ""
+  computerChoiceEl.textContent = ""
+  resultText.textContent = ""
+  resetSelected()
+}
+
 // random computer choice
 computerRandomChoice = () => {
   const computerChoiceNumber = Math.random()
@@ -89,7 +102,6 @@ displayComputerChoice = () => {
 
 // check result increase scores, update resultText
 updateScore = (playerChoice) => {
-  console.log(playerChoice, computerChoice)
   if(playerChoice === computerChoice) {
     resultText.textContent = "It's a tie!"
   } else {
@@ -147,3 +159,7 @@ select = (playerChoice) => {
   }
 }
 
+
+
+// on startup, set initial values
+resetAll()
