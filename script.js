@@ -56,6 +56,8 @@ const resetAll = () => {
   resetSelected()
 }
 
+window.resetAll = resetAll
+
 // random computer choice
 const computerRandomChoice = () => {
   const computerChoiceNumber = Math.random()
@@ -163,8 +165,7 @@ const select = (playerChoice) => {
   }
 }
 
-
+window.select = select
 
 // on startup, set initial values
 resetAll()
-startConfetti()
